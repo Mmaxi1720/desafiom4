@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Orbitron&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Servicios</title>
+    <link rel="stylesheet" href="./pages/servicios.css" />
+    <script defer src="./pages/servicios.js"></script>
+  </head>
+  <body>
+    
+      <header class="header">
+        <nav class="nav">
+          <a href="./index.html" class="logo nav-link">Maxi</a>
+          <input type="checkbox" id="nav-toggle" />
+          <label for="nav-toggle" class="lbl-menu">
+            <span id="span1"></span>
+            <span id="span2"></span>
+            <span id="span3"></span>
+          </label>
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <a href="./index.html" class="nav-menu-link nav-link">Inicio</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./servicios.html" class="nav-menu-link nav-link"
+                >Servicios</a
+              >
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="nav-menu-link nav-link">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="servicios-container">
+      <h1 class="title">Portfolio</h1></div>
+      <div class="servicios-content"></div>
+      <template id="servicios-template">
+        <div class="servicios">
+          <img
+            src="./pages/images/imagen-works.png"
+            alt=""
+            class="servicios-img"/>
+          <h2 class="servicios-titulo">Desarrollo de apps</h2>
+          <p class="servicios-text">
+            Algo interesante sobre mi Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Nulla dui quam, sollicitudin at enim id, sodales
+            vehicula.
+          </p>
+        </div>
+      </template>
+      <div class="footer">
+      <div class="footer__logo">Maxi</div>
+      <div class="footer__containter">
+        <a href="#" class="footer__redes"
+          >Instagram
+          <img class="footer__img" src="./pages/images/instagram.png" alt="" />
+        </a>
+        <a href="#" class="footer__redes"
+          >Linkedin
+          <img class="footer__img" src="./pages/images/linkedin.png" alt="" />
+        </a>
+        <a href="#" class="footer__redes"
+          >Github
+          <img class="footer__img" src="./pages/images/github.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
