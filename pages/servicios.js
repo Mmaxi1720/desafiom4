@@ -45,6 +45,7 @@ function main(){
     getWorks().then(function(works){
         for(const w of works){
             addWorkCard(w);
+            addWorkCard(w);
                        
         }
     })
