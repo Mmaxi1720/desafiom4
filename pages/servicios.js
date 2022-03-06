@@ -44,10 +44,8 @@ return fetch("https://cdn.contentful.com/spaces/18pmbjvkdo5q/environments/master
 function main(){
     getWorks().then(function(works){
         for(const w of works){
-            addWorkCard(w);
-            addWorkCard(w);
-                       
-        }
-    })
+        addWorkCard(w);               
+     };
+    });
 }
-main()
+main();

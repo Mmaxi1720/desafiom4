@@ -7,11 +7,11 @@
         font-family: "Montserrat";
         background-color: black;
     }
-    .servicios-container{
+    .portfolio-container{
     background-color: black;
     }
     @media (min-width: 768px){
-      .servicios-container{
+      .portfolio-container{
         background: linear-gradient(107.17deg, #958C40 29.35%, rgba(156, 0, 210, 0.8) 78.73%);
         position: absolute;
         top: 0;
@@ -19,22 +19,22 @@
         height: 400px;
       }
     }
-    .servicios-content{
+    .portfolio-content{
       display: grid;
       gap: 40px;
     }
     @media(min-width: 768px){
-      .servicios-content{
+      .portfolio-content{
         position: relative;
         top: 410px;
         grid-template-columns: 1fr 1fr 1fr;
       }
     }
-    .servicios{
+    .portfolio{
         margin: 0;
         padding: 20px;
       }
-    .servicios-img{
+    .portfolio-img{
         object-fit: cover;
         width: 100%;
     }
@@ -54,12 +54,12 @@
         padding: 100px 0 0 86px;
       }
     }
-    .servicios-titulo{
+    .portfolio-titulo{
         font-size: 24px;
         text-align: center;
         color: white;
     }
-    .servicios-text{
+    .portfolio-text{
         font-size: 16px;
         text-align: center;
         color: white;
@@ -75,6 +75,12 @@
           height: 60px;
           padding-top: 12px;
         }
+      }
+
+      .portfolio-link{
+        color: white;
+        height: 50px;
+        width: 50px;
       }
       .home-img {
         display: none;
