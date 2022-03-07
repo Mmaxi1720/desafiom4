@@ -8,4 +8,4 @@ function main(){
         navMenu.classList.toggle("nav-menu_visible")
     });
  };
-main()
+ main()

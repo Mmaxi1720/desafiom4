@@ -1,43 +1,70 @@
-
 function main(){
-    const navToggle = document.querySelector("#nav-toggle")
-    const navMenu = document.querySelector(".nav-menu")
+  const navToggle = document.querySelector("#nav-toggle")
+  const navMenu = document.querySelector(".nav-menu")
 
-    navToggle.addEventListener("click", ()=>{
-        navMenu.classList.toggle("nav-menu_visible")
-    });
- };
+  navToggle.addEventListener("click", ()=>{
+      navMenu.classList.toggle("nav-menu_visible")
+  });
+};
 main()
 
-function sendForm() {
-    const btnSend = document.querySelector(".btn-send");
-    btnSend.addEventListener("click", (send)=>{
-        send.preventDefault();
-        alert("mensaje enviado")
-    })
-    const form = document.querySelector(".form_container");
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        console.log(e);
-
-        const name = document.querySelector("#name").value;
-        const email = document.querySelector("#email").value;
-        const message = document.querySelector("#message").value;
-                    
-        const data = {
-            to: "mmendez1720@gmail.com",
-            message: `Mensaje de ${name}. Email: ${email}. El mensaje es ${message}`,
-        };
-    
-        fetch("https://apx-api.vercel.app/api/utils/dwf", {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(data),
-        })
-        .then((r) => r.json()) 
-        .catch((error) => console.error("Err!", error)) 
-        .then(() => { console.log("Send OK")});
+function formComponent(elem) {
+    const formElem = document.createElement("div");
+    formElem.className = "null_contact";
+    formElem.querySelector(".form__container");
+    formElem.innerHTML = `<div class="form">
+    <div class="form__title">Escribime</div>
+    <div class="form_container">
+    <h4 class="form__name">Nombre</h4>
+    <input class="form__input" type="text">
+    <label class="form__lbl" for="Nombre"></label>
+    <h4 class="form__name">Email</h4>
+    <input class="form__input" type="Email">
+    <label class="form__lbl" for="Email"></label>
+    <h4 class="form__name">Mensaje</h4>
+    <textarea class="form__textArea"></textarea>
+    <button class="btn-send">Enviar</button>
+  </div>
+  </div>
+   `;
+  
+    elem.appendChild(formElem);
+    formEvent();
+  }
+  
+  function formEvent() {
+    const formElem = document.querySelector(".form__container");
+    formElem.addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      let data = new FormData(event.target);
+  
+      const object = Object.fromEntries(data.entries());
         
+      const mensaje = ` 
+      user:  ${object.name} 
+      email:  ${object.email}       
+      mensaje: ${object.message} 
+      
+      `;
+  
+      fetch("https://apx-api.vercel.app/api/utils/dwf", {
+        method: "POST",
+  
+        headers: { "content-type": "application/json" },
+  
+        body: JSON.stringify({
+          to: "mmendez1720@gmail.com",
+  
+          message: mensaje,
+        }),
+      })
+        .then(() => {
+          console.log("soy el mensaje",mensaje)
+          alert("Mensaje enviado");
+        })
+        .catch(() => {
+          alert("Ha ocurrido un error");
+        });
     });
-};
-sendForm();
+    };
