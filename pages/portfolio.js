@@ -36,7 +36,7 @@ function getWorks() {
         const image = imagenData(imagenId, data);
         return {
           title: item.fields.titulo,
-          contenido: item.fields.texto,
+          description: item.fields.contenido,
           url: item.fields.url,
           imagen: image.fields.file.url,
         };
