@@ -32,7 +32,7 @@ function getWorks() {
     .then((data) => {
       console.log(data);
       const fieldsCollections = data.items.map((item) => {
-        const imagenId = item.fields.imagen.sys.id;
+        const imagenId = item.fields.portfolioImg.sys.id;
         const image = imagenData(imagenId, data);
         return {
           title: item.fields.titulo,
