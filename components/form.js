@@ -14,40 +14,18 @@ function formEl(el){
 <button class="btn-send">Enviar</button>
 </div>`;
 el.appendChild(formComponent);
-formEvent()
 };
-
 
 function formEvent(){
     const formComponent = document.querySelector(".form__contenedor");
     formComponent.addEventListener("submit", function(event) {
        event.preventDefault();
-       console.log(event);
-    
-       const data = new FormData(event.target);
-       const object = Object.fromEntries(data.entries());
-          
-      const mensaje = `
-        user: ${object.name}
-        email: ${object.email}
-        mensaje: ${object.message}
-      `;
-    
-      fetch("https://apx-api.vercel.app/api/utils/dwf", {
-          method: "POST",
-    
-          headers: {"content-type": "application/json"},
-          body: JSON.stringify({
-              to: "mmendez1720@gmail.com",
-              message: mensaje,
-          })
-      })
-    .then(()=> {
-        console.log("soy el mensaje")
-        alert("Mensaje enviado");
-    })
-    .catch(() => {
-      alert("Ha ocurrido un error");
-    });
-    });
-    }
+        
+       const data = {
+        to: "mmendez1720@gmail.com",
+        message: `${Nombre} quiere comuncarse con nosotros, dejo el siguiente mensaje: ${Mensaje}`};
+ fetch("https://apx-api.vercel.app/api/utils/dwf", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+  }).then((res) => res.json()).catch((error) => console.error("Ocurrio un error!", error)).then(() => { console.log("salió todo ok")});});}; 
