@@ -10,35 +10,19 @@
       rel="stylesheet"
     />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./pages/portfolio.css" />
+    <script defer src="./components/header.js"></script>
+   <link rel="stylesheet" href="./components/header.css">
+
+   <script defer src="./components/footer.js"></script>
+   <link rel="stylesheet" href="./components/footer.css">
+
+    <link rel="stylesheet" href="./pages/portfolio.css" />   
     <script defer src="./pages/portfolio.js"></script>
   </head>
-  <body>
-        <header class="header">
-        <nav class="nav">
-          <a href="./index.html" class="logo nav-link">Maxi</a>
-          <input type="checkbox" id="nav-toggle" />
-          <label for="nav-toggle" class="lbl-menu">
-            <span id="span1"></span>
-            <span id="span2"></span>
-            <span id="span3"></span>
-          </label>
-          <ul class="nav-menu">
-            <li class="nav-menu-item">
-              <a href="./index.html" class="nav-menu-link nav-link">Inicio</a>
-            </li>
-            <li class="nav-menu-item">
-              <a href="./servicios.html" class="nav-menu-link nav-link"
-                >Servicios</a
-              >
-            </li>
-            <li class="nav-menu-item">
-              <a href="./contacto.html" class="nav-menu-link nav-link">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
 
+  <body>
+    <div class="header__container">    
+      </div>
       <div class="portfolio-container">
       <h1 class="title">Portfolio</h1></div>
       <div class="portfolio-content"></div>
@@ -55,23 +39,7 @@
           <a class="portfolio-link" href="https://apx.school/">https://apx.school/</a>
           </template>
       </div>
+      <div class="footer__cont"></div>
       
-      <div class="footer">
-      <div class="footer__logo">Maxi</div>
-      <div class="footer__containter">
-        <a href="https://www.instagram.com/mendezmaxi91/" class="footer__redes"
-          >Instagram
-          <img class="footer__img" src="./pages/images/instagram.png" alt="" />
-        </a>
-        <a href="#" class="footer__redes"
-          >Linkedin
-          <img class="footer__img" src="./pages/images/linkedin.png" alt="" />
-        </a>
-        <a href="https://github.com/Mmaxi1720" class="footer__redes"
-          >Github
-          <img class="footer__img" src="./pages/images/github.png" alt="" />
-        </a>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>

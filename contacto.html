@@ -9,56 +9,23 @@
       rel="stylesheet"
     />
     <title>Contacto</title>
+    <script defer src="./components/header.js"></script>
+    <link rel="stylesheet" href="./components/header.css" />
+
+    <script defer src="./components/form.js"></script>
+        
+    <script defer src="./components/footer.js"></script>
+    <link rel="stylesheet" href="./components/footer.css">
+
     <link rel="stylesheet" href="./pages/contacto.css" />
     <script defer src="./pages/contacto.js"></script>
 </head>
 <body>
-    
-    <header class="header">
-        <nav class="nav">
-          <a href="./index.html" class="logo nav-link">Maxi</a>
-          <input type="checkbox"id="nav-toggle">
-          <label for="nav-toggle" class="lbl-menu">
-            <span id="span1"></span>
-            <span id="span2"></span>
-            <span id="span3"></span>
-          </label>
-          <ul class="nav-menu">
-              <li class="nav-menu-item"><a href="./index.html" class="nav-menu-link nav-link">Inicio</a></li>
-            <li class="nav-menu-item"><a href="./portfolio.html" class="nav-menu-link nav-link">Portfolio</a></li>
-            <li class="nav-menu-item"><a href="./servicios.html" class="nav-menu-link nav-link">Servicios</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="form">
+  
+    <div class="header__container"></div>
+    <div class="form">
     <div class="form__title">Contacto</div>
-    <div class="form_container">
-    <h4 class="form__name">Nombre</h4>
-    <input id="name"class="form__input" type="text">
-    <label class="form__lbl" for="nombre"></label>
-    <h4 class="form__name">Email</h4>
-    <input id="email"class="form__input" for="Email">
-    <label class="form__lbl" for="email"></label>
-    <h4 class="form__name">Mensaje</h4>
-    <textarea id="message"class="form__textArea"></textarea>
-    <button class="btn-send">Enviar</button>
-  </div>
-      <div class="footer">
-        <div class="footer__logo">Maxi</div>
-        <div class="footer__containter">
-          <a href="https://www.instagram.com/mendezmaxi91/" class="footer__redes"
-            >Instagram
-            <img class="footer__img" src="./pages/images/instagram.png" alt="" />
-          </a>
-          <a href="" class="footer__redes"
-            >Linkedin
-            <img class="footer__img" src="./pages/images/linkedin.png" alt="" />
-          </a>
-          <a href="https://github.com/Mmaxi1720" class="footer__redes"
-            >Github
-            <img class="footer__img" src="./pages/images/github.png" alt="" />
-          </a>
-        </div>
-    
-</body>
+    <div class="form__contenedor"></div>
+    <div class="footer__cont"></div>
+  </body>
 </html>

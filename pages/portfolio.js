@@ -1,4 +1,4 @@
-function navToggle() {
+function navToggleEL() {
   const navToggle = document.querySelector("#nav-toggle");
   const navMenu = document.querySelector(".nav-menu");
 
@@ -6,9 +6,12 @@ function navToggle() {
     navMenu.classList.toggle("nav-menu_visible");
   });
 }
-navToggle();
+headerComponent(document.querySelector(".header__container"));
+footerEl(document.querySelector(".footer__cont"));
+navToggleEL();
 
-function addWorkCard(params = {}) {
+
+ function addWorkCard(params = {}) {
   const template = document.querySelector("#portfolio-template");
   const container = document.querySelector(".portfolio-content");
 
@@ -50,11 +53,13 @@ function getWorks() {
   }
 }
 
-function main() {
+function WorksFunct() {
+  
   getWorks().then(function (works) {
     for (const w of works) {
       addWorkCard(w);
     }
   });
+
 }
-main();
+WorksFunct();

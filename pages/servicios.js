@@ -6,7 +6,6 @@ function navToggle(){
         navMenu.classList.toggle("nav-menu_visible")
     })
 }
-navToggle();
 
 function addWorkCard(params = {} ) {
     const template = document.querySelector("#servicios-template")
@@ -47,5 +46,9 @@ function main(){
         addWorkCard(w);               
      };
     });
+     headerComponent(document.querySelector(".header__container"));
+     footerEl(document.querySelector(".footer__cont"));
+
+     navToggle()
 }
 main();
