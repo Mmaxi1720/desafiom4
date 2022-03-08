@@ -17,7 +17,7 @@ const formEL = document.querySelector(".form_container");
         
         const data = {
             to: "mmendez1720@gmail.com",
-            message: `$(Nombre) quiere comunicarse con nosotros, deja el siguiente mensaje: $(Mensaje)`.
+            message: `$(Nombre) quiere comunicarse con nosotros, deja el siguiente mensaje: $(Mensaje)`,
             };
         fetch ("https://apx-api.vercel.app/api/utils/dwf", {
             method: "POST",
