@@ -12,26 +12,3 @@ function navToggle() {
     navMenu.classList.toggle("nav-menu_visible");
   });
 }
-
-function formEvent() {
-  const formEl = document.querySelector(".form_container");
-
-  formEl.addEventListener("submit", function (ev) {
-    ev.preventDefault();
-
-    const data = {
-      to: "mmendez1720@gmail.com",
-      message: `${Nombre} quiere comuncarse con nosotros, dejo el siguiente mensaje: ${Mensaje}`,
-    };
-    fetch("https://apx-api.vercel.app/api/utils/dwf", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .catch((error) => console.error("Ocurrio un error!", error))
-      .then(() => {
-        console.log("salió todo ok");
-      });
-  });
-}
