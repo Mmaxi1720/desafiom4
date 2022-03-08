@@ -1,5 +1,5 @@
 
-function main(){
+function navToggle(){
     const navToggle = document.querySelector("#nav-toggle")
     const navMenu = document.querySelector(".nav-menu")
 
@@ -7,37 +7,24 @@ function main(){
         navMenu.classList.toggle("nav-menu_visible")
     });
  };
-main()
+navToggle();
 
-function sendForm() {
-    const btnSend = document.querySelector(".btn-send");
-    btnSend.addEventListener("click", (send)=>{
-        send.preventDefault();
-        alert("mensaje enviado")
-    })
-    const form = document.querySelector(".form_container");
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        console.log(e);
+function formEvent() {
+const formEL = document.querySelector(".form_container");
 
-        const name = document.querySelector("#name").value;
-        const email = document.querySelector("#email").value;
-        const message = document.querySelector("#message").value;
-                    
+    formEL.addEventListener( "submit", function (ev) {
+        ev.preventDefault();
+        
         const data = {
             to: "mmendez1720@gmail.com",
-            message: `Mensaje de ${name}. Email: ${email}. El mensaje es ${message}`,
-        };
-    
-        fetch("https://apx-api.vercel.app/api/utils/dwf", {
+            message: `$(Nombre) quiere comunicarse con nosotros, deja el siguiente mensaje: $(Mensaje)`.
+            };
+        fetch ("https://apx-api.vercel.app/api/utils/dwf", {
             method: "POST",
-            headers: { "content-type": "application/json" },
+            headers: { "content-type": "application/json"},
             body: JSON.stringify(data),
-        })
-        .then((r) => r.json()) 
-        .catch((error) => console.error("Err!", error)) 
-        .then(() => { console.log("Send OK")});
-        
+        }). then((res) => res.json()).catch((error) => console.error ("Ocurrio un error!", error)).then(()=> {
+            console.log("salio todo Ok");
+        });
     });
 };
-sendForm();
