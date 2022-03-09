@@ -14,7 +14,7 @@ function formEl(el){
 <button class="btn-send">Enviar</button>
 </form>`;
 el.appendChild(formComponent);
-
+formEvent()
 };
 
 function formEvent(){
@@ -49,4 +49,4 @@ function formEvent(){
     });
     });
     }
-    formEvent()
+    
