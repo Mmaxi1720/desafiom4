@@ -26,7 +26,7 @@ function formEvent(){
        const object = Object.fromEntries(data.entries());
          
       const mensaje = `
-        user: ${object.nombre}
+        user: ${object.name}
         email: ${object.email}
         mensaje: ${object.message}
       `;
