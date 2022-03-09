@@ -37,7 +37,7 @@ function formEvent(){
           headers: {"content-type": "application/json"},
           body: JSON.stringify({
               to: "mmendez1720@gmail.com",
-              message: `${object.nombre} quiere comuncarse con nosotros, dejo el siguiente mensaje: ${object.message}`,
+              message: `${"} quiere comuncarse con nosotros, dejo el siguiente mensaje: ${message}`,
           })
       })
     .then(()=> {
